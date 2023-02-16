@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color:#20262E;
+}
+
+.container {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 280px);
+    gap: 15px;
+}
+
+.container li {
+    background: #fff;
+    list-style: none;
+    height: 370px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 15px;
+}
+
+.container .note {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-note,
+.icon,
+.bottom-content,
+.settings .menu li,
+.popup,
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-note {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-note .icon {
+    height: 70px;
+    width: 70px;
+    font-size: xx-large;
+    color:#CD5888;
+    ;
+    border-radius: 50%;
+    justify-content: center;
+    border: 3px dashed #CD5888;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.add-note p {
+    color: #CD5888;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.note p {
+    font-size: 22px;
+    margin-top: 5px;
+    font-weight: 550;
+}
+span{
+    color: #20262E;
+}
+p{
+    color: #913175;
+}
+.note span {
+    display: block;
+    word-wrap: break-word;
+    margin-top: 10px;
+    color: #20262E;
+    font-size: 16;
+}
+
+.note .bottom-content {
+    border-top: 1px groove #505050;
+
+}
+
+.bottom-content span {
+    color: #413f3f;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.settings {
+    position: relative;
+
+}
+
+.settings .menu {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    background: #E9E8E8;
+    padding: 5px 0;
+    transform: scale(0);
+    border-radius: 5px;
+    transform-origin: bottom right;
+    box-shadow: 0 0 6px rgb(70, 66, 66, 0.15);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    transition: transform 0.2s ease;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -ms-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+}
+
+.settings:hover .menu {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.settings .menu li {
+    height: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px 15px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    justify-content: flex-start;
+}
+
+.menu li:hover {
+    background: #d6d3d3;
+}
+
+.menu li i {
+    padding-right: 5px;
+}
+
+.menu li:last-child {
+    margin-bottom: 0;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.image img {
+    height: 90px;
+    margin-top: 8px;
+}
+.image::before {
+    height: 0px;
+    margin-top: 8px;
+}
+.image img::before {
+    content: ' ';
+    display: none;
+}
+.dontshow {
+    display: none;
+}
+
+/* POP-UP */
+
+.popup-container {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3)
+}
+
+.popup-container .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    /* -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px; */
+}
+
+.popup .content {
+    width: calc(100% - 15px);
+    background: #fff;
+    border-radius: 5px;
+}
+
+.popup .content header {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgb(94, 167, 250);
+}
+
+.content header p {
+    font-size: 22px;
+    font-weight: 450;
+}
+
+.content header i {
+    color: rgb(221, 52, 52);
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.content form {
+    margin: 15px 20px 30px;
+}
+
+.content form .row {
+    margin-bottom: 20px;
+
+}
+
+.content form .row {
+    margin-bottom: 10px;
+}
+
+form .row label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.content form :where(input, textarea) {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px 10px;
+}
+
+.content form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.content form .add button {
+    width: 50%;
+    height: 30px;
+    border: 1px solid;
+    outline: none;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px #413f3f;
+    border-radius: 4px;
+    background-color: rgb(86, 236, 118);
+    margin-bottom: 15px;
+
+}
+.content form .add button:hover {
+    background-color: rgb(61, 197, 90);
+}
+
+.content form .add {
+    display: flex;
+    justify-content: center;
+}
+.note .details span{
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.popup-container, .popup-container .popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.40s ease;
+    -webkit-transition: all 0.40s ease;
+    -moz-transition: all 0.40s ease;
+    -ms-transition: all 0.40s ease;
+    -o-transition: all 0.40s ease;
+}
+.popup-container.show, .popup-container.show .popup{
+    opacity: 1;
+    pointer-events: auto ;
+}
